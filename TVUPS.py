@@ -1,22 +1,37 @@
 import time
 import sys
 
-#print("****************************************")
-#print("* Hello, I am 'Insert Witty Name Here' *")
-#print("*            Version: 1.0.0            *")
-#print("*   Please feel free (but not obliged) *")
-#print("*          to have a nice day          *")
-#print("****************************************")
+version = "1.0.0"
+
+print("****************************************")
+print("*         Hello, I am 'TVUPS'          *")
+print("*   (The Very Usefull Python Script)   *")
+print("*                                      *")
+print("*            Version ", version,"           *")
+print("****************************************")
 
 print("\nType help for a list of commnands")
 
 while True:
-    command = input(">>>")
+    command = input(">>")
 
     #HELP
     if command.lower() == "help":
-        print("Unfortunatly the developer has not implemented this feature yet :( #BlameTheDev")
+        print("Displays the help pages")
+        print("Usage: help <command type>\n")
+        print("Viable options for <command type>:")
+        print("Basic\nMath")
 
+    elif command.lower().split()[0] == "help":
+        if command.lower().split()[1] == "basic":
+            print("Help      Documentation")
+            
+        elif command.lower().split()[1] == "math":
+            print("Math")
+            
+        else:
+            print("That is not a valid help page")
+	
     #ABOUT
     elif command.lower() == "about":
         print("This program was brought to you by me.")
@@ -29,7 +44,7 @@ while True:
 
     #VERSION
     elif command.lower() == "version":
-        print("1.0.0")
+        print(version)
 
     #ADD
     elif command.lower() == "add":
