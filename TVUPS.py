@@ -1,12 +1,14 @@
 import time
 import sys
 
-#print("****************************************")
-#print("*         Hello, I am 'TVUPS'          *")
-#print("*   (The Very Usefull Python Script)   *")
-#print("*                                      *")
-#print("*             Version 1.0.0            *")
-#print("****************************************")
+version = "1.0.0"
+
+print("****************************************")
+print("*         Hello, I am 'TVUPS'          *")
+print("*   (The Very Usefull Python Script)   *")
+print("*                                      *")
+print("*            Version ", version,"           *")
+print("****************************************")
 
 print("\nType help for a list of commnands")
 
@@ -51,7 +53,7 @@ while True:
 
     #VERSION
     elif command.lower() == "version":
-        print("1.0.0")
+        print(version)
 
     #ADD
     elif command.lower() == "add":
