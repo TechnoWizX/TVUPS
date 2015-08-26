@@ -1,19 +1,18 @@
 import time
 import sys
 
-version = "1.0.0"
-
-print("****************************************")
-print("*         Hello, I am 'TVUPS'          *")
-print("*   (The Very Usefull Python Script)   *")
-print("*                                      *")
-print("*            Version ", version,"           *")
-print("****************************************")
+#print("****************************************")
+#print("*         Hello, I am 'TVUPS'          *")
+#print("*   (The Very Usefull Python Script)   *")
+#print("*                                      *")
+#print("*             Version 1.0.0            *")
+#print("****************************************")
 
 print("\nType help for a list of commnands")
 
 while True:
     command = input(">>")
+
 
     #HELP
     if command.lower() == "help":
@@ -24,14 +23,22 @@ while True:
 
     elif command.lower().split()[0] == "help":
         if command.lower().split()[1] == "basic":
-            print("Help      Documentation")
+            print("Basic commands:")
+            print("help			Documentation on TVUPS")
+            print("about			Information about the dev")
+            print("version			The current version of this program")
+            print("exit			Closes this program")
             
         elif command.lower().split()[1] == "math":
-            print("Math")
+            print("Math commmands:")
+            print("add			Adds two numbers together")
+            print("sub			Subratcts one number from another")
+            print("mult			Multiplies two numbers together")
+            print("div			Divides one number by another")
             
         else:
             print("That is not a valid help page")
-	
+
     #ABOUT
     elif command.lower() == "about":
         print("This program was brought to you by me.")
@@ -44,7 +51,7 @@ while True:
 
     #VERSION
     elif command.lower() == "version":
-        print(version)
+        print("1.0.0")
 
     #ADD
     elif command.lower() == "add":
