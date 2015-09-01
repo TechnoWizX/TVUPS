@@ -250,7 +250,9 @@ while True:
         print("rev")
 
     elif command.lower().split(" ")[0] == "str":
-        if command.lower().split(" ")[1] == "str":
+
+        #REV
+        if command.lower().split(" ")[1] == "rev":
             try:
                 string = command.lower().split(" ")[2]
                 print(string[::-1])
@@ -261,7 +263,13 @@ while True:
                 print("Viable options for <string>:")
                 print("Anything!")
 
-    #NOT VALID
+        else:
+            print("Various commands for editing strings")
+            print("Usage: str <function>\n")
+            print("Viable options for <function>:")
+            print("rev")
+
+#NOT VALID#########################################################NOT VALID#
     else:
         print("That is not a valid command")
 
