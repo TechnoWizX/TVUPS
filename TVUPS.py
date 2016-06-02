@@ -1,6 +1,7 @@
 import time
 import sys
 import math
+import webbrowser
 
 version = "1.0.1"
 
@@ -13,6 +14,10 @@ https://github.com/TechnoWizX/TVUPS''')
 
 def versionProg(version):
     print(version)
+
+def git():
+    webbrowser.open_new_tab("https://github.com/TechnoWizX/TVUPS")
+    print("https://github.com/TechnoWizX/TVUPS")
 
 def exitProg():
     print("Goodbye!")
@@ -30,7 +35,8 @@ Basic\nMaths\nString''')
         print('''Basic commands:
 help			Documentation on TVUPS
 about			Information about the dev
-version			The current version of this program
+version			Tells you the version number
+git			Opens the github page for this project
 exit			Closes this program''')
     def math():
         print('''Maths commmands:
@@ -143,7 +149,7 @@ print('''****************************************
 *         Hello, I am 'TVUPS'          *
 *   (The Very Usefull Python Script)   *
 *                                      *
-*            Version ", version,"           *
+*            Version ''', version,'''           *
 ****************************************''')
 
 print("\nType help for a list of commnands")
@@ -180,7 +186,10 @@ while True:
     elif command.lower() == "version":
         versionProg(version)
 
-        
+    #GIT
+    elif command.lower() == "git":
+        git()
+
 #MATHS#########################################################MATHS#
     #ADD
     elif command.lower().split(" ")[0] == "add" or "sub" or "mult" or "div":
